@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav
+      class="p-4 xl:px-12 flex justify-between items-center text-xl lg:text-2xl xl:text-3xl text-gray-600 shadow-md">
+      <div class="flex gap-5 items-center">
+        <i
+          class="fa-brands fa-facebook text-blue-500 cursor-pointer text-xl lg:text-3xl xl:text-4xl"></i>
+        <div class="relative text-sm md:text-base">
+          <input
+            placeholder="Search Facebook"
+            type="search"
+            class="bg-gray-100 h-8 rounded-xl max-w-52 md:max-w-64 pl-8 px-1" />
+          <i
+            class="fa-solid fa-search absolute top-[30%] md:top-[30%] left-2 text-gray-400"></i>
+        </div>
+      </div>
+      <div
+        class="navOptions flex justify-between items-center gap-12 xl:gap-16 2xl:gap-32">
+        <div title="Home" class="cursor-pointer hover:text-blue-500">
+          <i class="fa-solid fa-house"></i>
+        </div>
+        <div title="Watch" class="cursor-pointer hover:text-blue-500">
+          <i class="fa-solid fa-tv"></i>
+        </div>
+        <div title="Marketplace" class="cursor-pointer hover:text-blue-500">
+          <i class="fa-solid fa-store"></i>
+        </div>
+        <div title="Groups" class="cursor-pointer hover:text-blue-500">
+          <i class="fa-solid fa-people-group"></i>
+        </div>
+        <div title="Games" class="cursor-pointer hover:text-blue-500">
+          <i class="fa-solid fa-gamepad"></i>
+        </div>
+      </div>
+      <div class="flex justify-between items-center gap-5">
+        <div>
+          <i class="fa-solid fa-bars cursor-pointer hover:text-blue-500"></i>
+        </div>
+        <div>
+          <i
+            class="fa-brands fa-facebook-messenger cursor-pointer hover:text-blue-500"></i>
+        </div>
+        <div>
+          <i class="fa-solid fa-bell cursor-pointer hover:text-blue-500"></i>
+        </div>
+
+        <div
+          class="UserProfileIcon cursor-pointer size-10 rounded-full relative">
+          <div
+            class="absolute bottom-0 -right-1 bg-gray-100 size-4 center items-center rounded-full text-xs">
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <img
+            src="./assets/images/dp.jpg"
+            alt="Profile Picture"
+            class="h-[100%] object-cover cursor-pointer rounded-full" />
+        </div>
+      </div>
+    </nav>
+    <main
+      class="flex justify-between h-[93vh] bg-gradient-to-r from-gray-100 to-gray-200">
+      <!-- here section -->
+      <div
+        class="left_section p-4 xl:p-12 xl:py-6 py-4 flex flex-col justify-between h-full">
+        <div class="top flex flex-col gap-4 xl:gap-8 font-semibold">
+          <div
+            class="user flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div class="UserProfileIcon cursor-pointer size-8 rounded-full">
+              <img
+                src="./assets/images/dp.jpg"
+                alt="Profile Picture"
+                class="h-[100%] object-cover cursor-pointer rounded-full" />
+            </div>
+            <div>John Doe</div>
+          </div>
+          <div
+            class="friends flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/color/30/friends--v1.png"
+                alt="friends--v1" />
+            </div>
+            <div>Friends</div>
+          </div>
+          <div
+            class="memories flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/pulsar-gradient/48/memories.png"
+                alt="memories" />
+            </div>
+            <div>Memories</div>
+          </div>
+          <div
+            class="saved flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/fluency/30/bookmark-ribbon.png"
+                alt="bookmark-ribbon" />
+            </div>
+            <div>
+              Saved
+              <span class="text-gray-500">(25)</span>
+            </div>
+          </div>
+          <div
+            class="Grups flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/color/30/team-skin-type-7.png"
+                alt="team-skin-type-7" />
+            </div>
+            <div>Groups</div>
+          </div>
+          <div
+            class="Video flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/pulsar-gradient/30/video.png"
+                alt="video" />
+            </div>
+            <div>Video</div>
+          </div>
+          <div class="Marketplace flex justify-start items-center gap-4">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/fluency/48/online-store.png"
+                alt="online-store" />
+            </div>
+            <div>Marketplace</div>
+          </div>
+          <div
+            class="feeds flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/nolan/64/activity-feed.png"
+                alt="activity-feed" />
+            </div>
+            <div>Feeds</div>
+          </div>
+          <div
+            class="events flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/color/48/event-accepted.png"
+                alt="event-accepted" />
+            </div>
+            <div>Events</div>
+          </div>
+          <div
+            class="ads flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/fluency/30/analytics--v1.png"
+                alt="analytics--v1" />
+            </div>
+            <div>Ads Manager</div>
+          </div>
+          <div
+            class="Fundraiser flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div>
+              <img
+                width="30"
+                height="30"
+                src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-fundraiser-event-management-flaticons-lineal-color-flat-icons-4.png"
+                alt="Fundraiser" />
+            </div>
+            <div>Fundraiser</div>
+          </div>
+          <div
+            class="see_more flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            <div
+              class="w-[30px] h-[30px] bg-gray-100 rounded-full center items-center">
+              <img
+                width="20"
+                height="20"
+                src="https://img.icons8.com/ios-glyphs/30/expand-arrow--v1.png"
+                alt="expand-arrow--v1" />
+            </div>
+            <div>See More</div>
+          </div>
+        </div>
+        <div class="bottom text-gray-500 text-sm">
+          <div class="font-semibold">
+            Privacy • Terms • Advertising • Ad choices
+            <i class="fa-solid fa-play"></i> • Cookies •
+          </div>
+          <div>More • Meta © 2025</div>
+        </div>
+      </div>
+
+      <div
+        class="middle_section p-4 xl:p-12 xl:py-6 py-4 flex flex-col justify-between h-full">
+        <div>
+          <div
+            class="top bg-white rounded-md text-gray-500 p-4 flex flex-col gap-3">
+            <div class="flex p-2 pb-3 px-4 gap-4 border-b-2 border-b-gray-200">
+              <div class="UserProfileIcon cursor-pointer size-8 rounded-full">
+                <img
+                  src="./assets/images/dp.jpg"
+                  alt="Profile Picture"
+                  class="h-[100%] object-cover cursor-pointer rounded-full" />
+              </div>
+
+              <div class="search">
+                <input
+                  type="text"
+                  placeholder="What's on your mind, John?"
+                  class="bg-gray-100 p-2 rounded-xl w-64 md:w-96" />
+              </div>
+            </div>
+            <div class="flex gap-5 px-7">
+              <div class="live_video flex center items-center gap-2">
+                <img
+                  width="30"
+                  height="30"
+                  src="https://img.icons8.com/pulsar-gradient/48/live-video-on.png"
+                  alt="live-video-on" />
+                <div>Live Video</div>
+              </div>
+              <div class="photos flex center items-center gap-2">
+                <img
+                  width="30"
+                  height="30"
+                  src="https://img.icons8.com/fluency/48/photos.png"
+                  alt="photos" />
+                <div>Photo/video</div>
+              </div>
+              <div class="feeling flex center items-center gap-2">
+                <img
+                  width="30"
+                  height="30"
+                  src="https://img.icons8.com/color/48/smiling.png"
+                  alt="smiling" />
+                <div>Feeling/activity</div>
+              </div>
+            </div>
+          </div>
+          <div class="stories"></div>
+          <div class="feeds"></div>
+        </div>
+      </div>
+
+      <div
+        class="right_section p-4 xl:p-12 xl:py-6 py-4 flex flex-col justify-between h-full text-sm md:text-base">
+        <div class="flex flex-col gap-4">
+          <div
+            class="sponsered flex flex-col gap-3 border-b-2 border-b-gray-300 pb-4">
+            <div class="font-semibold text-gray-500 text-lg">Sponsored</div>
+            <div class="ad1 flex justify-start gap-3">
+              <div
+                class="w-24 h-14 xl:w-44 xl:h-24 rounded-t-lg overflow-hidden">
+                <img src="./assets/images/addmissionOpen.png" alt="" />
+              </div>
+
+              <div class="flex flex-col justify-between">
+                <div class="font-semibold">
+                  <div>Application Now</div>
+                  <div>Accepted</div>
+                </div>
+
+                <div class="text-sm text-gray-500">
+                  <a
+                    href="www.cuchd.in"
+                    rel="no-referrer noopener"
+                    target="_blank"
+                    >www.cuchd.in</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="ad2 flex justify-start gap-3">
+              <div
+                class="w-24 h-14 xl:w-44 xl:h-24 rounded-t-md overflow-hidden">
+                <img src="./assets/images/websiteBuildAd.png" alt="" />
+              </div>
+
+              <div class="flex flex-col justify-between">
+                <div class="font-semibold">
+                  <div>We Make</div>
+                  <div>Websites</div>
+                </div>
+
+                <div class="text-sm text-gray-500">
+                  <a
+                    href="https://portfolio-w-react.vercel.app/"
+                    rel="no-referrer noopener"
+                    target="_blank"
+                    >Visit</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="birthdays flex flex-col gap-3 border-b-2 border-b-gray-300 pb-4">
+            <div class="font-semibold text-gray-500 text-lg">Birthdays</div>
+            <div class="flex justify-center items-center gap-2">
+              <div>
+                <img
+                  width="50"
+                  height="50"
+                  src="https://img.icons8.com/office/40/birthday.png"
+                  alt="birthday" />
+              </div>
+              <div>
+                <span class="font-semibold">Nitesh Varshney</span> and
+                <span class="font-semibold">Anshul Thakur</span> have their
+                birthdays today.
+              </div>
+            </div>
+          </div>
+          <div
+            class="contacts flex flex-col gap-3 border-b-2 border-b-gray-300 pb-4">
+            <div class="font-semibold text-gray-500 text-lg">Contacts</div>
+            <div class="flex flex-col gap-3">
+              <div
+                class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+                <div class="size-8 relative">
+                  <img
+                    src="https://picsum.photos/seed/picsum/200/300"
+                    alt="Profile Pic"
+                    class="object-cover size-8 rounded-full" />
+                  <div
+                    class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div>
+                </div>
+                <div>Sam Smith</div>
+              </div>
+              <div
+                class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+                <div class="size-8 relative">
+                  <img
+                    src="https://picsum.photos/id/237/200/300"
+                    alt="Profile Pic"
+                    class="object-cover size-8 rounded-full" />
+                  <div
+                    class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div>
+                </div>
+                <div>Steve Smith</div>
+              </div>
+              <div
+                class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+                <div class="size-8 relative">
+                  <img
+                    src="https://picsum.photos/seed/picsum/200/300"
+                    alt="Profile Pic"
+                    class="object-cover size-8 rounded-full" />
+                  <!-- <div
+                    class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div> -->
+                </div>
+                <div>Jane Doe</div>
+              </div>
+              <div
+                class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+                <div class="size-8 relative">
+                  <img
+                    src="https://picsum.photos/id/237/200/300"
+                    alt="Profile Pic"
+                    class="object-cover size-8 rounded-full" />
+                  <div
+                    class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div>
+                </div>
+                <div>Tim Pain</div>
+              </div>
+              <div
+                class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+                <div class="size-8 relative">
+                  <img
+                    src="https://picsum.photos/200/300?grayscale"
+                    alt="Profile Pic"
+                    class="object-cover size-8 rounded-full" />
+                  <!-- <div
+                    class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div> -->
+                </div>
+                <div>Jack Hyde</div>
+              </div>
+              <div
+                class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+                <div class="size-8 relative">
+                  <img
+                    src="https://picsum.photos/seed/picsum/200/300"
+                    alt="Profile Pic"
+                    class="object-cover size-8 rounded-full" />
+                  <!-- <div
+                    class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div> -->
+                </div>
+                <div>Jon Snow</div>
+              </div>
+              <div
+                class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+                <div class="size-8 relative">
+                  <img
+                    src="https://picsum.photos/200/300?grayscale"
+                    alt="Profile Pic"
+                    class="object-cover size-8 rounded-full" />
+                  <div
+                    class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div>
+                </div>
+                <div>Mitch Stark</div>
+              </div>
+              <div
+                class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+                <div class="size-8 relative">
+                  <img
+                    src="https://picsum.photos/id/237/200/300"
+                    alt="Profile Pic"
+                    class="object-cover size-8 rounded-full" />
+                  <div
+                    class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div>
+                </div>
+                <div>Peter Parker</div>
+              </div>
+              <div
+              class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+              <div class="size-8 relative">
+                <img
+                  src="https://picsum.photos/seed/picsum/200/300"
+                  alt="Profile Pic"
+                  class="object-cover size-8 rounded-full" />
+                <div
+                  class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div>
+              </div>
+              <div>Tony Stark</div>
+            </div>
+            <div
+              class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+              <div class="size-8 relative">
+                <img
+                  src="https://picsum.photos/id/237/200/300"
+                  alt="Profile Pic"
+                  class="object-cover size-8 rounded-full" />
+                <div
+                  class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div>
+              </div>
+              <div>Steve Rogers</div>
+            </div>
+            <div
+              class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
+              <div class="size-8 relative">
+                <img
+                  src="https://picsum.photos/seed/picsum/200/300"
+                  alt="Profile Pic"
+                  class="object-cover size-8 rounded-full" />
+                <!-- <div
+                  class="size-2 bg-green-700 absolute bottom-0 right-0 rounded-full border-1 border-white"></div> -->
+              </div>
+              <div>clark Kent</div>
+            </div>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
