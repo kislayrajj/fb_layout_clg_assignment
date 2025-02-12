@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook Layout</title>
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
 
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -14,11 +14,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <nav
-      class="p-4 xl:px-12 flex justify-between items-center text-xl lg:text-2xl xl:text-3xl text-gray-600 shadow-md">
+      class="p-4 xl:px-12 flex justify-between items-center text-xl lg:text-2xl xl:text-3xl text-gray-600 shadow-md fixed w-full h-[70px] bg-white/90 z-1">
       <div class="flex gap-5 items-center">
         <i
           class="fa-brands fa-facebook text-blue-500 cursor-pointer text-xl lg:text-3xl xl:text-4xl"></i>
@@ -75,13 +75,25 @@
       </div>
     </nav>
     <main
-      class="flex flex-1 justify-between h-[93vh] bg-gradient-to-r from-gray-100 to-gray-200">
+      class="flex flex-1 justify-between min-h- bg-gradient-to-r from-gray-100 to-gray-200 pt-[70px]">
       <!-- here section -->
       <div
-        class="left_section p-4 xl:p-12 xl:py-6 py-4 flex flex-col justify-between h-full">
+        id="leftNavbar"
+        class="left_section p-4 xl:p-12 xl:py-6 py-4  relative">
+        <div
+          id="hideLeftNavbarBtn"
+          class="absolute block md:hidden top-0 -right-0 border-2">
+          <img
+          class="cursor-pointer "
+            width="20"
+            height="20"
+            src="https://img.icons8.com/office/40/menu--v1.png"
+            alt="menu--v1" />
+        </div>
+        <div id="leftNavbarContent" class="md:flex flex-col justify-between h-screen pb-[75px] xl:pb-24 hidden ">
         <div class="top flex flex-col gap-4 xl:gap-8 font-semibold">
           <div
-            class="user flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            class="user flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out w-fit">
             <div class="UserProfileIcon cursor-pointer size-8 rounded-full">
               <img
                 src="./assets/images/dp.jpg"
@@ -94,6 +106,7 @@
             class="friends flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
             <div>
               <img
+                class="hide_icons"
                 width="30"
                 height="30"
                 src="https://img.icons8.com/color/30/friends--v1.png"
@@ -105,6 +118,7 @@
             class="memories flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
             <div>
               <img
+                class="hide_icons"
                 width="30"
                 height="30"
                 src="https://img.icons8.com/pulsar-gradient/48/memories.png"
@@ -116,6 +130,7 @@
             class="saved flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
             <div>
               <img
+                class="hide_icons"
                 width="30"
                 height="30"
                 src="https://img.icons8.com/fluency/30/bookmark-ribbon.png"
@@ -130,6 +145,7 @@
             class="Grups flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
             <div>
               <img
+                class="hide_icons"
                 width="30"
                 height="30"
                 src="https://img.icons8.com/color/30/team-skin-type-7.png"
@@ -141,6 +157,7 @@
             class="Video flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
             <div>
               <img
+                class="hide_icons"
                 width="30"
                 height="30"
                 src="https://img.icons8.com/pulsar-gradient/30/video.png"
@@ -151,6 +168,7 @@
           <div class="Marketplace flex justify-start items-center gap-4">
             <div>
               <img
+                class="hide_icons"
                 width="30"
                 height="30"
                 src="https://img.icons8.com/fluency/48/online-store.png"
@@ -162,6 +180,7 @@
             class="feeds flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
             <div>
               <img
+                class="hide_icons"
                 width="30"
                 height="30"
                 src="https://img.icons8.com/nolan/64/activity-feed.png"
@@ -173,6 +192,7 @@
             class="events flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
             <div>
               <img
+                class="hide_icons"
                 width="30"
                 height="30"
                 src="https://img.icons8.com/color/48/event-accepted.png"
@@ -184,6 +204,7 @@
             class="ads flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
             <div>
               <img
+                class="hide_icons"
                 width="30"
                 height="30"
                 src="https://img.icons8.com/fluency/30/analytics--v1.png"
@@ -195,6 +216,7 @@
             class="Fundraiser flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
             <div>
               <img
+                class="hide_icons"
                 width="30"
                 height="30"
                 src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-fundraiser-event-management-flaticons-lineal-color-flat-icons-4.png"
@@ -203,7 +225,7 @@
             <div>Fundraiser</div>
           </div>
           <div
-            class="see_more flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out">
+            class="see_more flex justify-start items-center gap-4 cursor-pointer hover:text-blue-500 transition-all duration-100 ease-in-out hide_icons">
             <div
               class="w-[30px] h-[30px] bg-gray-100 rounded-full center items-center">
               <img
@@ -222,6 +244,9 @@
           </div>
           <div>More • Meta © 2025</div>
         </div>
+        
+          
+      </div>
       </div>
 
       <div
@@ -341,9 +366,9 @@
             </div>
           </div>
           <div id="feeds" class="">
-            <div class="feed_1 bg-white rounded-lg p-2">
+            <div class="feed_1 bg-white rounded-lg">
               <div class="top">
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center p-2">
                   <div class="flex gap-3 items-center">
                     <div
                       class="dp size-9 rounded-full overflow-hidden border-2 border-blue-500 p-[2px] center items-center">
@@ -365,13 +390,78 @@
                     <i class="fa-solid fa-xmark"></i>
                   </div>
                 </div>
+                <div class="feedImg h-full">
+                  <img src="./assets/images/sea.jpg" alt="" />
+                </div>
+                <div class="options p-2">
+                  <div
+                    class="liked flex justify-between text-gray-500 border-b-2 border-gray-300 pb-2">
+                    <div class="flex center items-center gap-2">
+                      <div
+                        class="rounded-full bg-blue-500 size-5 center items-center">
+                        <i
+                          class="fa-solid fa-thumbs-up text-white text-[10px]"></i>
+                      </div>
+                      <div>Tony Stark and 20 other</div>
+                    </div>
+                    <div>10 <i class="fa-solid fa-comment"></i></div>
+                  </div>
+                  <div
+                    class="actions flex justify-between items-center p-2 px-12 font-semibold text-gray-500 border-b-2 border-gray-300 pb-3">
+                    <div class="center items-center gap-2">
+                      <i
+                        class="fa-regular fa-thumbs-up text-xl lg:text-2xl"></i>
+                      Like
+                    </div>
+                    <div class="center items-center gap-2">
+                      <i class="fa-regular fa-comment text-xl lg:text-2xl"></i>
+                      Comments
+                    </div>
+                    <div class="center items-center gap-2">
+                      <i class="fa-brands fa-whatsapp text-xl lg:text-2xl"></i>
+                      Send
+                    </div>
+                  </div>
+                  <div class="comment py-2">
+                    <div class="flex gap-2">
+                      <div
+                        class="dp size-9 rounded-full overflow-hidden center items-center">
+                        <img
+                          src="https://picsum.photos/id/247/200/300"
+                          alt="dp"
+                          class="object-cover rounded-full size-full" />
+                      </div>
+                      <div>
+                        <div
+                          class="rounded-3xl bg-gray-200 p-1 px-4 font-semibold">
+                          <div class="">Tom John McCarthy Latham</div>
+                          <div>Have fun! ⛵🌊</div>
+                        </div>
+                        <div
+                          class="p-2 flex justify-between items-center text-gray-500 text-sm">
+                          <div class="flex gap-3">
+                            <div>2d</div>
+                            <div class="font-bold">Like</div>
+                            <div>Reply</div>
+                          </div>
+                          <div
+                            class="center items-center bg-blue-500 size-5 rounded-full">
+                            <i
+                              class="fa-solid fa-thumbs-up text-white text-xs"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+     
       <div
-        class="right_section p-4 xl:p-12  xl:py-6 py-4 flex flex-col justify-between h-full text-sm md:text-base">
+        class="right_section p-4 xl:p-12 xl:py-6 py-4 md:flex flex-col justify-between h-full text-sm md:text-base hidden">
         <div class="flex flex-col gap-4">
           <div
             class="sponsered flex flex-col gap-3 border-b-2 border-b-gray-300 pb-4">
@@ -459,7 +549,7 @@
                 class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
                 <div class="size-8 relative">
                   <img
-                    src="https://picsum.photos/id/237/200/300"
+                    src="https://picsum.photos/id/238/200/300"
                     alt="Profile Pic"
                     class="object-cover size-8 rounded-full" />
                   <div
@@ -471,7 +561,7 @@
                 class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
                 <div class="size-8 relative">
                   <img
-                    src="https://picsum.photos/seed/picsum/200/300"
+                    src="https://picsum.photos/id/239/200/300"
                     alt="Profile Pic"
                     class="object-cover size-8 rounded-full" />
                   <!-- <div
@@ -483,7 +573,7 @@
                 class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
                 <div class="size-8 relative">
                   <img
-                    src="https://picsum.photos/id/237/200/300"
+                    src="https://picsum.photos/id/240/200/300"
                     alt="Profile Pic"
                     class="object-cover size-8 rounded-full" />
                   <div
@@ -495,7 +585,7 @@
                 class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
                 <div class="size-8 relative">
                   <img
-                    src="https://picsum.photos/200/300?grayscale"
+                    src="https://picsum.photos/id/241/200/300"
                     alt="Profile Pic"
                     class="object-cover size-8 rounded-full" />
                   <!-- <div
@@ -507,7 +597,7 @@
                 class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
                 <div class="size-8 relative">
                   <img
-                    src="https://picsum.photos/seed/picsum/200/300"
+                    src="https://picsum.photos/id/242/200/300"
                     alt="Profile Pic"
                     class="object-cover size-8 rounded-full" />
                   <!-- <div
@@ -519,7 +609,7 @@
                 class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
                 <div class="size-8 relative">
                   <img
-                    src="https://picsum.photos/200/300?grayscale"
+                    src="https://picsum.photos/id/240/200/300"
                     alt="Profile Pic"
                     class="object-cover size-8 rounded-full" />
                   <div
@@ -531,7 +621,7 @@
                 class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
                 <div class="size-8 relative">
                   <img
-                    src="https://picsum.photos/id/237/200/300"
+                    src="https://picsum.photos/id/244/200/300"
                     alt="Profile Pic"
                     class="object-cover size-8 rounded-full" />
                   <div
@@ -543,7 +633,7 @@
                 class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
                 <div class="size-8 relative">
                   <img
-                    src="https://picsum.photos/seed/picsum/200/300"
+                    src="https://picsum.photos/id/241/200/300"
                     alt="Profile Pic"
                     class="object-cover size-8 rounded-full" />
                   <div
@@ -567,7 +657,7 @@
                 class="cursor-pointer flex items-center justify-start gap-3 font-semibold">
                 <div class="size-8 relative">
                   <img
-                    src="https://picsum.photos/seed/picsum/200/300"
+                    src="https://picsum.photos/id/232/200/300"
                     alt="Profile Pic"
                     class="object-cover size-8 rounded-full" />
                   <!-- <div

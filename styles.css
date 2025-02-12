@@ -2,3 +2,10 @@
     display: flex;
     justify-content: center;
 }
+
+
+@media (max-width:1080px) {
+    .hide_icons{
+        display: none;
+    }  
+}
